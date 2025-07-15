@@ -3,7 +3,6 @@ POST localhost:8081/api/v1/category/admin
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImVyYW5nZWxsaXZpazdAZ21haWwuY29tIiwic3ViIjoiZXJhbmdlbGxpdmlrN0BnbWFpbC5jb20iLCJpYXQiOjE3NTE0NTU1NTcsImV4cCI6MTc1MTU0MTk1N30.lrJU9M_Lh6iqzFPAV5IlDGtQLT5MOLDEIjv5C6LHvSbaPGD2__D8GZH5Dcr3Ynm2nqKDBrbax9ifKsK1ve7kQQ
 
-
 ### Update category
 PUT localhost:8081/api/v1/category/admin/1
 Content-Type: application/json
