@@ -66,18 +66,6 @@ public class ProfileEntity {
     }
 }
 
-/*private String name;
-    private String surname;
-    private String email;
-    private String mainPhoto; // URL sifatida
-
-    private boolean isVerified = false;
-
-    private String verificationToken;
-    private LocalDateTime tokenExpiry;
-
-    private LocalDateTime createdAt;
-* */
 
 
 
