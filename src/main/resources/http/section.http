@@ -1,0 +1,41 @@
+### Create section
+POST localhost:8081/api/v1/section/admin
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImVyYW5nZWxsaXZpazdAZ21haWwuY29tIiwic3ViIjoiZXJhbmdlbGxpdmlrN0BnbWFpbC5jb20iLCJpYXQiOjE3NTE0NTU1NTcsImV4cCI6MTc1MTU0MTk1N30.lrJU9M_Lh6iqzFPAV5IlDGtQLT5MOLDEIjv5C6LHvSbaPGD2__D8GZH5Dcr3Ynm2nqKDBrbax9ifKsK1ve7kQQ
+
+{
+  "orderNumber": 2,
+  "nameUz": "Asosiy 2",
+  "nameRu": "Основной 2",
+  "nameEn": "Main 2",
+  "sectionKey": "main2"
+}
+
+
+### Update section
+PUT localhost:8081/api/v1/section/admin/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlcm5hbWUiOiJiaWdtYW5nY29tQGdtYWlsLmNvbSIsInN1YiI6ImJpZ21hbmdjb21AZ21haWwuY29tIiwiaWF0IjoxNzUwMzAyODkxLCJleHAiOjE3NTAzODkyOTF9.jiApspABtlGP2x8zYvQkRnqqvl16o2VOIv_p6-8-Z9eQb0R5DsN3sjpWTADpijxEK0FvTVhWFe7iRRV9N9CwAA
+
+{
+  "orderNumber": 1,
+  "nameUz": "Asosiy 11",
+  "nameRu": "Основной 11",
+  "nameEn": "Main 11",
+  "sectionKey": "main1"
+}
+
+
+### Delete category
+DELETE localhost:8081/api/v1/section/admin/3
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlcm5hbWUiOiJiaWdtYW5nY29tQGdtYWlsLmNvbSIsInN1YiI6ImJpZ21hbmdjb21AZ21haWwuY29tIiwiaWF0IjoxNzUwMzAyODkxLCJleHAiOjE3NTAzODkyOTF9.jiApspABtlGP2x8zYvQkRnqqvl16o2VOIv_p6-8-Z9eQb0R5DsN3sjpWTADpijxEK0FvTVhWFe7iRRV9N9CwAA
+
+
+### Get region list
+GET localhost:8081/api/v1/section/admin
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlcm5hbWUiOiJiaWdtYW5nY29tQGdtYWlsLmNvbSIsInN1YiI6ImJpZ21hbmdjb21AZ21haWwuY29tIiwiaWF0IjoxNzUwMzAyODkxLCJleHAiOjE3NTAzODkyOTF9.jiApspABtlGP2x8zYvQkRnqqvl16o2VOIv_p6-8-Z9eQb0R5DsN3sjpWTADpijxEK0FvTVhWFe7iRRV9N9CwAA
+
+
+### Get section by lang
+GET localhost:8081/api/v1/section/lang
+Accept-Language: EN

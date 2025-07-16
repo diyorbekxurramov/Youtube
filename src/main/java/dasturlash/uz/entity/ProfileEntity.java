@@ -8,6 +8,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 public class ProfileEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "name", nullable = false, length = 50)
     private String name;
@@ -24,8 +25,8 @@ public class ProfileEntity {
     @Column(name = "surname", nullable = false, length = 50)
     private String surname;
 
-    @Column(name = "email", nullable = false, unique = true, length = 100)
-    private String email;
+    @Column(name = "username", nullable = false, unique = true, length = 100)
+    private String username;
 
     @Column(name = "main_photo", length = 500)
     private String mainPhoto;
@@ -46,9 +47,12 @@ public class ProfileEntity {
     @Column(name = "status", nullable = false)
     private ProfileStatus status = ProfileStatus.ACTIVE;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "role", nullable = false)
-    private ProfileRole role = ProfileRole.USER;
+    @OneToMany(mappedBy = "profile")
+    private List<ProfileRoleEntity> roleList;
+
+    @Column(name = "visible", nullable = false)
+    private Boolean visible = true;
+
 
     @CreationTimestamp
     @Column(name = "created_date", nullable = false)

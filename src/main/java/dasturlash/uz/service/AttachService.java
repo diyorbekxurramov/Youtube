@@ -25,9 +25,10 @@ import java.nio.file.Paths;
 
 import java.util.*;
 
+import static java.lang.String.valueOf;
+
 
 @Service
-@RequiredArgsConstructor
 public class AttachService {
     @Autowired
     private AttachRepository attachRepository;
@@ -61,7 +62,7 @@ public class AttachService {
 
             // save to db
             AttachEntity entity = new AttachEntity();
-            entity.setId(Integer.valueOf(key + "." + extension));
+            entity.setId(key + "." + extension);
             entity.setPath(pathFolder);
             entity.setSize(file.getSize());
             entity.setOriginName(file.getOriginalFilename());
@@ -178,7 +179,7 @@ public class AttachService {
         return attachUrl + "/api/v1/attach/open/" + fileName;
     }
 
-    public AttachDTO openDTO(Integer id) {
+    public AttachDTO openDTO(String id) {
         AttachDTO attachDTO = new AttachDTO();
         attachDTO.setUrl(attachUrl + "/api/v1/attach/open/" + id);
         attachDTO.setId(id);
