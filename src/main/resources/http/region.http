@@ -1,0 +1,43 @@
+### Create region
+POST localhost:8081/api/v1/region/admin
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImVyYW5nZWxsaXZpazdAZ21haWwuY29tIiwic3ViIjoiZXJhbmdlbGxpdmlrN0BnbWFpbC5jb20iLCJpYXQiOjE3NTE0NTU1NTcsImV4cCI6MTc1MTU0MTk1N30.lrJU9M_Lh6iqzFPAV5IlDGtQLT5MOLDEIjv5C6LHvSbaPGD2__D8GZH5Dcr3Ynm2nqKDBrbax9ifKsK1ve7kQQ
+
+
+{
+  "orderNumber": 4,
+  "nameUz": "Toshkent 4",
+  "nameRu": "Ташкент 4",
+  "nameEn": "Tashkent 4",
+  "regionKey": "tashkent4"
+}
+
+
+### Update region
+PUT localhost:8081/api/v1/region/admin/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImVyYW5nZWxsaXZpazdAZ21haWwuY29tIiwic3ViIjoiZXJhbmdlbGxpdmlrN0BnbWFpbC5jb20iLCJpYXQiOjE3NTE0NTU1NTcsImV4cCI6MTc1MTU0MTk1N30.lrJU9M_Lh6iqzFPAV5IlDGtQLT5MOLDEIjv5C6LHvSbaPGD2__D8GZH5Dcr3Ynm2nqKDBrbax9ifKsK1ve7kQQ
+
+
+{
+  "orderNumber": 1,
+  "nameUz": "Iqtisodiyot11",
+  "nameRu": "Экономика11",
+  "nameEn": "Economics11",
+  "categoryKey": "iqtisodiyot11"
+}
+
+
+### Delete category
+DELETE localhost:8081/api/v1/region/admin/2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImVyYW5nZWxsaXZpazdAZ21haWwuY29tIiwic3ViIjoiZXJhbmdlbGxpdmlrN0BnbWFpbC5jb20iLCJpYXQiOjE3NTE0NTU1NTcsImV4cCI6MTc1MTU0MTk1N30.lrJU9M_Lh6iqzFPAV5IlDGtQLT5MOLDEIjv5C6LHvSbaPGD2__D8GZH5Dcr3Ynm2nqKDBrbax9ifKsK1ve7kQQ
+
+
+### Get region list
+GET localhost:8081/api/v1/region/admin
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImVyYW5nZWxsaXZpazdAZ21haWwuY29tIiwic3ViIjoiZXJhbmdlbGxpdmlrN0BnbWFpbC5jb20iLCJpYXQiOjE3NTE0NTU1NTcsImV4cCI6MTc1MTU0MTk1N30.lrJU9M_Lh6iqzFPAV5IlDGtQLT5MOLDEIjv5C6LHvSbaPGD2__D8GZH5Dcr3Ynm2nqKDBrbax9ifKsK1ve7kQQ
+
+
+### Get region by lang
+GET localhost:8081/api/v1/region/lang
+Accept-Language: EN

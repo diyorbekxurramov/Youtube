@@ -1,21 +1,19 @@
 package dasturlash.uz.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@Getter
 @Setter
+@Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class AttachDTO {
-
+public class TagDTO {
     private String id;
-    private String originName;
-    private Long size;
-    private String extension;
-    private LocalDateTime createdData;
-    private String url;
+    @NotBlank(message = "Name required")
+    private String name;
+    private String tagKey;
+    private LocalDateTime createdDate;
 }
-
