@@ -1,23 +1,25 @@
-### createa attach
-POST http://localhost:8080/api/attach/upload
+### Upload a file
+POST http://localhost:8081/api/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
 
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="example.jpg"
+Content-Type: image/jpeg
 
+< C:/path/to/your/example.jpg
+--WebAppBoundary--
 
-{
-    "id": 1,
-    "originalName": "photo.jpg",
-    "path": "uploads/2025/07/08/",
-    "extension": "jpg",
-    "size": 204800,
-    "createdAt": "2025-07-08T10:22:34.123"
-}
+### Open a file
+GET http://localhost:8081/api/attach/open/{fileId}
 
+### Download a file
+GET http://localhost:8081/api/attach/download/{fileId}
 
-###
-POST http://localhost:8080/attach/upload
-### Open
-GET http://localhost:8080/api/v1/attach/open
+### Delete a file
+DELETE http://localhost:8081/api/attach/{fileId}
 
+### Get all files with pagination
+GET http://localhost:8081/api/attach?page=1&size=10
 
 ### Download
-GET http://localhost:8080/api/v1/attach/download
+GET http://localhost:8081/api/v1/attach/download
