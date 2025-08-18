@@ -1,0 +1,12 @@
+#Create tag
+POST localhost:8081/api/v1/region/admin
+Content-Type: application/json
+
+{
+  "orderNumber": 5,
+  "nameUz": "Toshkent 5",
+  "nameRu": "Ташкент 5",
+  "nameEn": "Tashkent 5",
+  "regionKey": "tashkent5"
+}
+

@@ -83,7 +83,7 @@
     3. Delete Category (ADMIN)
     4. Category List
 
-4. Tag
+4. Tag (id,name,created_date)
       1. Create Tag
       2. Update Tag (ADMIN)
       3. Delete Tag (ADMIN)
@@ -91,7 +91,7 @@
 
 5. Channel
     1. Create Channel (USER)
-    2. Update Channel ( USER and OWNER)
+ёё    2. Update Channel ( USER and OWNER)
     3. Update Channel photo ( USER and OWNER)
     4. Update Channel banner ( USER and OWNER)
     5. Channel Pagination (ADMIN)

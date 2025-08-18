@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 
-public interface AttachRepository extends JpaRepository<AttachEntity, String> {
+public interface  AttachRepository extends JpaRepository<AttachEntity, String> {
     @Query("from AttachEntity where visible = true order by createdDate desc")
     Page<AttachEntity> findAllByOrderByCreatedDateDesc(Pageable pageable);
 
